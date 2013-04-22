@@ -23,6 +23,8 @@ public final class ResourceUtils
 		Validate.notEmpty( resourceName );
 
 		final InputStream is = ResourceUtils.class.getClassLoader().getResourceAsStream( resourceName );
+		if ( is == null ) return null;
+
 		try
 		{
 			return InputStreamUtils.toByteArray( is );
@@ -42,6 +44,8 @@ public final class ResourceUtils
 		Validate.notEmpty( resourceName );
 
 		final InputStream is = ResourceUtils.class.getClassLoader().getResourceAsStream( resourceName );
+		if ( is == null ) return null;
+
 		try
 		{
 			return InputStreamUtils.toString( is );
@@ -61,6 +65,8 @@ public final class ResourceUtils
 		Validate.notEmpty( resourceName );
 
 		final InputStream is = ResourceUtils.class.getClassLoader().getResourceAsStream( resourceName );
+		if ( is == null ) return null;
+
 		try
 		{
 			return InputStreamUtils.toProperties( is );
@@ -80,6 +86,8 @@ public final class ResourceUtils
 		Validate.notEmpty( resourceName );
 
 		final InputStream is = ResourceUtils.class.getClassLoader().getResourceAsStream( resourceName );
+		if ( is == null ) return null;
+
 		try
 		{
 			return InputStreamUtils.toMap( is );
@@ -99,6 +107,8 @@ public final class ResourceUtils
 		Validate.notEmpty( resourceName );
 
 		final InputStream is = ResourceUtils.class.getClassLoader().getResourceAsStream( resourceName );
+		if ( is == null ) return null;
+
 		try
 		{
 			return InputStreamUtils.toList( is, delimiter );
